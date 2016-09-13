@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 上传中心 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:clt="http://schemas.android.com/apk/res/com.clt.ledmanager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.clt.ui.TitleBarView
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        clt:left_drawble="@android:color/transparent"
+        clt:right_drawble="@android:color/transparent"
+        clt:title_name="@string/upload_center" />
+	<include
+        android:id="@+id/ll_delete_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/titlebar_upload_delete"
+        android:visibility="gone" />
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@color/bgray"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/uploading"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_14" />
+
+            <LinearLayout
+                android:id="@+id/ll_uploading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:orientation="vertical" >
+
+                <!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal" >
+
+            <ProgressBar
+                android:id="@+id/pb_upload_progress"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0"
+                android:max="100" />
+
+            <TextView
+                android:id="@+id/tv_upload_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="0%" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_upload_start_pause"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/btn_red_selector"
+                android:text="开始"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_12" />
+
+            <Button
+                android:id="@+id/btn_upload_delete"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/btn_red_selector"
+                android:text="删除"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_12" />
+        </LinearLayout>
+                -->
+            </LinearLayout>
+            <!-- 已经完成 -->
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@color/bgray"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/uploaded"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_14" />
+
+            <LinearLayout
+                android:id="@+id/ll_have_uploaded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 删除按钮 -->
+
+    <LinearLayout
+        android:id="@+id/ll_upload_delete"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#E7E7E7"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/iv_upload_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_delete_upload"
+            android:clickable="false"
+            android:focusable="false" />
+
+        <TextView
+            android:id="@+id/tv_upload_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dp"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            android:text="删除"/>
+    </LinearLayout>
+
+</LinearLayout>

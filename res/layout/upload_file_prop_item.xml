@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:clt="http://schemas.android.com/apk/res/com.clt.ledmanager"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_item_selector"
+    android:paddingLeft="15dp"
+    android:paddingRight="10dp"
+    android:orientation="horizontal" >
+
+	<TextView
+	    android:id="@+id/tv_file_name" 
+	    android:layout_width="0dp"
+	    android:layout_weight="1.0"
+	    android:layout_height="48dp"
+	    android:gravity="center_vertical"
+	    android:singleLine="true"/>
+	
+	<Button
+	    android:id="@+id/btn_move_up"
+	    android:layout_width="24dp"
+	    android:layout_height="24dp"
+	    android:gravity="center"
+	    android:focusable="false"
+	    android:clickable="true"
+	    android:background="@drawable/btn_file_up_selector"
+	    android:scaleType="fitCenter"
+	    android:focusableInTouchMode="true"/>
+	<Button 
+	    android:id="@+id/btn_move_down"
+	    android:layout_width="24dp"
+	    android:layout_height="24dp"
+	    android:gravity="center"
+	    android:focusable="false"
+	    android:clickable="true"
+	    android:background="@drawable/btn_file_down_selector"
+	    android:scaleType="fitCenter"
+	    android:focusableInTouchMode="true"/>
+	<Button 
+	    android:id="@+id/btn_delete"
+	    android:layout_width="24dp"
+	    android:layout_height="24dp"
+	    android:gravity="center"
+	    android:focusable="false"
+	    android:clickable="true"
+	    android:background="@drawable/btn_file_delete_selector"
+	    android:scaleType="fitCenter"
+	    />
+</LinearLayout>

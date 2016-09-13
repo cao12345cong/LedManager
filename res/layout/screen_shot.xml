@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:clt="http://schemas.android.com/apk/res/com.clt.ledmanager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.clt.ui.TitleBarView
+        android:id="@+id/titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        clt:left_drawble="@drawable/btn_go_back"
+        clt:right_drawble="@drawable/ic_update"
+        clt:title_name="@string/screenshots" 
+        clt:left_text="@string/home_page"
+        clt:right_text="@string/update"/>
+    <!-- 服务端信息 -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:scrollbars="horizontal" >
+
+        <ImageView
+            android:id="@+id/iv_screen_shot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitStart"/>
+    </ScrollView>
+
+</LinearLayout>

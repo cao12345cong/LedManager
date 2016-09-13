@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LedManager</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="search_no_result">没有查找到对应的终端</string>
+    <string name="back">返回</string>
+    <string name="second">秒</string>
+    <!-- 底部菜单 -->
+    <string name="home_page">首页</string>
+    <string name="sender_card">发送卡</string>
+    <string name="receiver_card">接收卡</string>
+    <string name="connect_relation">连接关系</string>
+    <string name="search">查找</string>
+    <string name="online">在线</string>
+    <string name="offline">离线</string>
+    <string name="not_connect">未连接</string>
+    <string name="terminal_not_specified">未指定终端</string>
+    <string name="screen_manager">屏幕管理</string>
+    <string name="video_play_control">节目播放控制</string>
+    <string name="set_port_area">设置网口面积</string>
+    <string name="search_server">查找服务端</string>
+    <string name="search_server_type">查找方式</string>
+    <string name="select_upload_program">选择节目</string>
+    <string name="delete_program">删除节目</string>
+    <string name="name">节目名</string>
+    <string name="path">路径</string>
+    <string name="delete_fail">删除节目失败</string>
+    <string name="delete_success">删除节目成功</string>
+    <string name="screenshots">屏幕截图</string>
+
+    <!-- 语言 -->
+    <string name="change_language">语言切换</string>
+    <string name="detect_sender_card">探测发送卡</string>
+    <!-- 发送卡参数 -->
+    <string name="x">列起点</string>
+    <string name="y">行起点</string>
+    <string name="width">宽度</string>
+    <string name="height">高度</string>
+    <string name="a_port">A口</string>
+    <string name="b_port">B口</string>
+    <string name="c_port">C口</string>
+    <string name="d_port">D口</string>
+    <string name="sender_type">发送卡型号</string>
+    <string name="custom">自定义</string>
+    <string name="bright">亮度</string>
+    <string name="color_temp">色温</string>
+    <string name="switch_screen">开关屏幕</string>
+    <string name="auto_bright_adjust">自动亮度调节</string>
+    <string name="receiver_params_from_sender">接收卡参数来自发送卡</string>
+    <string name="pass_switch">过交换机</string>
+    <string name="no_video_audio_output">无信号输入时禁止输出视频和音频</string>
+    <string name="forbid_div_hdmi_switch">禁止dvi/hdmi自动切换</string>
+    <string name="zero_delay">0延迟</string>
+    <string name="enable_dhcp">启用HDCP</string>
+    <string name="tenbit_flag">10bit位标志</string>
+    <string name="signal_input_type">信号输入类型</string>
+    <string name="sender_output">发送卡输出</string>
+    <string name="frame_by_frame">逐帧</string>
+    <string name="frame_by_separate">隔帧</string>
+    <string name="sender_resolution">发送卡分辨率</string>
+    <string name="resolution">分辨率</string>
+    <string name="set">设置</string>
+    <string name="save">保存</string>
+    <string name="saved">已保存</string>
+    <string name="send">发送</string>
+    <string name="set_as_current_display_resolution">设置为当前显示器分辨率</string>
+    <string name="test_mode">测试模式</string>
+    <string name="tempeture">实时温度</string>
+    <string name="sender_dampness">发送卡湿度</string>
+    <string name="active_width">宽度</string>
+    <string name="active_height">高度</string>
+    <string name="DVI_info">DVI信息</string>
+    <string name="frame_rate">帧率</string>
+    <string name="blank_time">消隐时间</string>
+    <string name="clock_rate">时钟频率</string>
+    <string name="fetch">读取</string>
+    <string name="test_mode_type">测试模式类型</string>
+    <string name="detect">探测</string>
+    <string name="detect_sender">探测发送卡</string>
+    <string name="detect_sender_update">刷新</string>
+    <string name="sender_card_time">发送卡时间</string>
+
+    <!-- message -->
+    <string name="save_success">保存成功</string>
+    <string name="save_fail">保存失败</string>
+    <string name="setting_success">设置成功</string>
+    <string name="setting_fail">设置失败</string>
+    <string name="time_input_error">时间输入错误</string>
+    <string name="please_input_brightness">请输入亮度</string>
+    <string name="network_not_connected">网络连接失败</string>
+    <string name="app_need_to_reboot">应用需要重新启动，设置才能生效</string>
+    <string name="connect_network">请连接wifi</string>
+    <string name="fail_connect_to_server">连接服务器失败</string>
+    <string name="detect_card_fail">探卡失败，请重探</string>
+    <string name="detect_card_success">探卡成功</string>
+    <string name="please_input_r_c">请输入一个1到256之间的正整数</string>
+    <string name="please_input_int">请输入一个正整数</string>
+    <string name="please_select_vaild_file">请选择正确的文件</string>
+    <string name="please_input_program_name">请输入节目名</string>
+    <string name="please_input_r_c_mulity">行乘以列应该小于1024</string>
+    <string name="please_input_wh">请输入一个1到1024之间的正整数</string>
+    <string name="please_input_pos_int">请输入一个正确的正装数</string>
+    <string name="submit">确定</string>
+    <string name="kick_of">有新的客户端连接上服务器，本客户端离线</string>
+    <!-- 文件上传 -->
+    <string name="upload_program">节目上传</string>
+    <string name="see_upload_situation">查看下载情况</string>
+    <string name="upload_center">下载中心</string>
+    <string name="uploaded">已完成</string>
+    <string name="update">刷新</string>
+    <string name="please_select_file">请选择上传文件</string>
+    <string name="upload_sucessful">上传成功</string>
+    <string name="file_not_exist">文件不存在</string>
+    <string name="file_zero_size">文件大小为0</string>
+    <string name="select_all">全选</string>
+    <string name="cancel">取消</string>
+    <string name="have_select">已选中</string>
+    <string name="ge">个</string>
+    <string name="pause">暂停</string>
+    <string name="has_paused">已暂停</string>
+    <string name="continuee">继续</string>
+    <string name="delete">删除</string>
+    <string name="waitting">排队中</string>
+    <string name="uploading">上传中</string>
+    <string name="upload_fail">上传失败</string>
+    <string name="please_select">请选择</string>
+    <string name="start_upload">开始上传</string>
+    <string name="stop_upload">终止上传</string>
+    <string name="program_type">节目类型</string>
+    <string name="window_properties">窗口属性</string>
+    <string name="startX">起点X</string>
+    <string name="startY">起点Y</string>
+    <string name="add_file">添加文件</string>
+    <string name="add_image">添加图片</string>
+    <string name="add_vedio">添加视频</string>
+    <string name="add_txt">添加Txt</string>
+    <string name="image_properties">图片属性</string>
+    <string name="vedio_properties">视频属性</string>
+    <string name="singleline_text_properties">单行文本属性</string>
+    <string name="multiline_text_properties">多行文本属性</string>
+    <string name="opacity">不透明</string>
+    <string name="constrain_proportion">约束比例</string>
+    <string name="stay_time">停留时间</string>
+    <string name="play_times">播放次数</string>
+    <string name="transform">翻转</string>
+    <string name="duration">时长</string>
+    <string name="volume">音量</string>
+    <string name="move_left">连续左移</string>
+    <string name="head_tail_conn">首尾相连</string>
+    <string name="text_source">文本来源</string>
+    <string name="font">字体</string>
+    <string name="scroll_up">连续上移</string>
+    <string name="vertical_central_align">垂直居中</string>
+    <string name="parent_directory">上一级</string>
+    <string name="please_add_image">请添加一个图片</string>
+    <string name="please_add_vedio">请添加一个视频</string>
+    <string name="please_add_txt">请添加一个txt</string>
+    <string name="add">添加</string>
+    <string name="text_color">文字颜色</string>
+    <string name="background_color">背景色</string>
+    <string name="has_selected_file_num">已选中 %1$d 个文件</string>
+    <!-- 节目 -->
+    <string name="program_manager">节目管理</string>
+    <string name="get_programs">获取所有节目</string>
+    <string name="from_usb_disk">U盘</string>
+    <string name="from_sd_card">SD卡</string>
+    <string name="from_internal_storage">内部存储</string>
+    <string name="none">无</string>
+    <string name="start_upload_pic">开始上传图片</string>
+    <string name="upload_pic_success">上传图片成功</string>
+    <string name="program_size">大小</string>
+    <string name="program_create_time">创建时间</string>
+    <string name="program_path">路径</string>
+    <string name="program_full_path">全路径</string>
+    <string name="program_total">共%1$s个节目</string>
+    <string name="upload_pic">上传节目</string>
+    <string name="pic_path">路径</string>
+    <string name="create_upload">上传节目</string>
+    <string name="size">宽高</string>
+    <string name="program_name">节目名</string>
+    <string name="upload_progress">%1$s/%2$s</string>
+
+    <!-- 接收卡参数设置 -->
+    <string name="send_cards">发送卡数</string>
+    <string name="ports">网口数</string>
+    <string name="send_row_count">行数</string>
+    <string name="send_col_count">列数 </string>
+    <string name="send_card">发送卡</string>
+    <string name="port_number">网口序号</string>
+    <string name="link_path">连线方向</string>
+    <string name="smart_link">智能连线</string>
+    <string name="advanced">高级 </string>
+    <string name="save_to_rcv">固化 </string>
+    <string name="reset">重置 </string>
+    <string name="empty_card">空卡 </string>
+    <!-- 接收卡 -->
+    <string name="box_parameter">箱体参数</string>
+    <string name="refresh">刷新</string>
+    <string name="refresh_rate">刷新倍数</string>
+    <string name="gray_level">灰度</string>
+    <string name="frequency">串钟</string>
+    <string name="bright_percent">亮度等级</string>
+    <string name="gray_mode">灰度模式</string>
+    <string name="gamma_value">伽马</string>
+    <string name="blanking_value">消隐时间 </string>
+    <string name="bri_level">亮度等级</string>
+    <string name="lease_oe">最小OE </string>
+    <string name="box_width_tiny">&lt;=150</string>
+    <string name="box_height_tiny">&lt;=256</string>
+    <string name="box_w_h">箱体宽高</string>
+    <string name="onoff">开关</string>
+    <string name="on">开</string>
+    <string name="off">关</string>
+    <!-- 发送卡 -->
+    <string name="display_mode">显示模式</string>
+    <string name="video_source">视频来源</string>
+    <string name="please_input_pass">请输入密码</string>
+    <!-- 其他信息 -->
+    <string name="info">信息</string>
+    <string name="programs_info">节目信息</string>
+    <string name="other_info">相关信息</string>
+    <string name="modify_term_name">重命名</string>
+    <string name="modify">修改</string>
+    <string name="currnet_term_name">现名</string>
+    <string name="new_term_name">新名</string>
+    <string name="sdcard_room">可用 %1$s, 共 %2$s</string>
+    <string name="term_info">终端信息</string>
+    <string name="conn_state">连接终端</string>
+    <string name="sdcard_room_state">终端容量</string>
+    <string name="version_info">版本信息</string>
+    <string name="version_ledmanager">LedManager</string>
+    <string name="version_ledserver">LedServer</string>
+    <string name="version_sender_card">发送卡</string>
+    <string name="version_system">ColorHome</string>
+    <string name="version_colorlight">ColorLight</string>
+    <string name="net_setting">网络配置</string>
+    <string name="no_program">没有节目</string>
+    <!-- 发送卡输出 -->
+    <string-array name="sender_output">
+        <item>逐帧</item>
+        <item>隔帧</item>
+    </string-array>
+    <!-- 测试模式 -->
+    <string-array name="test_mode">
+        <item>正常</item>
+        <item>纯红</item>
+        <item>纯绿</item>
+        <item>纯蓝</item>
+        <item>纯白</item>
+        <item>水平移动白条</item>
+        <item>垂直移动横条</item>
+        <item>斜下移动白条</item>
+        <item>斜上移动白条</item>
+        <item>下移白方格</item>
+        <item>渐变红</item>
+        <item>渐变绿</item>
+        <item>渐变蓝</item>
+        <item>渐变白</item>
+        <item>黑</item>
+        <item>LOGO</item>
+        <item>红灰度自动增加</item>
+        <item>绿灰度自动增加</item>
+        <item>蓝灰度自动增加</item>
+        <item>白灰度自动增加</item>
+        <item>全白与全黑快速切换</item>
+        <item>红绿蓝白色条</item>
+        <item>自动循环上述测试模式</item>
+    </string-array>
+
+    <!-- 发送卡分辨率 -->
+    <string-array name="resolution">
+        <item>自定义</item>
+        <item>800*600</item>
+        <item>1024*768</item>
+        <item>1280*720</item>
+        <item>1280*960</item>
+        <item>1280*1024</item>
+        <item>1366*768</item>
+        <item>1440*900</item>
+        <item>1440*1050</item>
+        <item>1600*900</item>
+        <item>1680*1050</item>
+        <item>1920*1080</item>
+        <item>2048*1024</item>
+    </string-array>
+    <string-array name="signal_input_type_arr">
+        <item>HDMI</item>
+        <item>DVI</item>
+        <item>C1S</item>
+        <item>Not Found</item>
+    </string-array>
+    <!-- 开关屏 -->
+    <string-array name="on_off">
+        <item>开</item>
+        <item>关</item>
+    </string-array>
+    <!-- 语言 -->
+    <string-array name="language">
+        <item>简体中文</item>
+        <item>English</item>
+    </string-array>
+    <!-- 显示模式 -->
+    <string-array name="display_mode">
+        <item>正常2D</item>
+        <item>立体3D</item>
+    </string-array>
+    <!-- 帧率 -->
+    <string-array name="frame_rate">
+        <item>30</item>
+        <item>50</item>
+        <item>60</item>
+    </string-array>
+    <!-- 视频来源 -->
+    <string-array name="video_source">
+        <item>HDMI</item>
+        <item>DVI</item>
+        <item>C1S</item>
+    </string-array>
+    <!-- port -->
+    <string-array name="ports">
+        <item>A口</item>
+        <item>B口</item>
+        <item>C口</item>
+        <item>D口</item>
+    </string-array>
+    <!-- port -->
+    <string-array name="smart_link">
+        <item>是</item>
+        <item>否</item>
+    </string-array>
+
+    <!-- 节目类型 -->
+    <string-array name="program_type">
+        <item>图片</item>
+        <item>视频</item>
+        <item>单行文本</item>
+        <item>多行文本</item>
+    </string-array>
+    <!-- 旋转 -->
+    <string-array name="file_rotate">
+        <item>正常</item>
+        <item>镜像</item>
+        <item>倒立</item>
+        <item>左旋</item>
+        <item>右旋</item>
+    </string-array>
+
+    <!-- 文本来源 -->
+    <string-array name="single_text_source">
+        <item>来自输入</item>
+        <item>来自文本</item>
+    </string-array>
+ 	<!-- 颜色-->
+ 	<string-array name="text_color">
+        <item>黑色</item>
+        <item>深灰色</item>
+        <item>灰色</item>
+        <item>浅灰色</item>
+        <item>白色</item>
+        <item>红色</item>
+        <item>绿色</item>
+        <item>蓝色</item>
+        <item>黄色</item>
+        <item>青色</item>
+        <item>品红色</item>
+    </string-array>
+    
+    <!-- 查找服务端方式 -->
+    <string-array name="find_term_type">
+        <item>UDP</item>
+        <item>TCP</item>
+    </string-array>
+
+</resources>

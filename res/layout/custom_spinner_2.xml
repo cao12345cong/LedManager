@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/background_light"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#defafd"
+        android:padding="10.0dip" >
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10.0dip"
+            android:src="@drawable/spinner_tick" />
+
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/icon"
+            android:text="@string/please_select"
+            android:textColor="#0182af"
+            android:textSize="20.0dip" />
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/formcustom_spinner_gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:columnWidth="36dp"
+        android:horizontalSpacing="10dp"
+        android:numColumns="2"
+        android:scrollbars="none"
+        /> <!-- listview 的线为灰色 -->
+
+</LinearLayout>

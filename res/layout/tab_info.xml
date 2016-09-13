@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- tabHost -->
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- 标题栏 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/titlebar" >
+
+            <!-- 左按钮 -->
+
+            <LinearLayout
+                android:id="@+id/lv_titlebar_goback"
+                android:layout_width="wrap_content"
+                android:minWidth="48dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/btn_title_btn_selector"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:onClick="goBack" >
+
+                <ImageView
+                    android:id="@+id/iv_titlebar_goback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/btn_go_back"
+                    android:clickable="false"
+                    android:focusable="false" />
+            </LinearLayout>
+
+            <!-- 标题 -->
+
+            <LinearLayout
+                android:id="@+id/ll_titlebar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <RadioGroup
+                    android:id="@+id/rg_bottom_menu"
+                    android:layout_width="200dp"
+                    android:layout_height="36dp"
+                    android:checkedButton="@+id/rb_index"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@id/rb_index"
+                        style="@style/tab_rdo_style"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/bottom_radio_selector"
+                        android:text="@string/programs_info" />
+
+                    <RadioButton
+                        android:id="@+id/rb_sender_card"
+                        style="@style/tab_rdo_style"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/bottom_radio_selector"
+                        android:text="@string/other_info" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <!-- 右按钮 -->
+
+            <ImageView
+                android:id="@+id/iv_titlebar_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null" />
+        </RelativeLayout>
+
+        <!--  -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent" />
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+</TabHost>

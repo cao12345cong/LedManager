@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	 <color name="transparent">#00000000</color>
+      <!-- 白色 -->
+    <color name="white">#FFFFFF</color>
+
+    <!-- 黑色 -->
+    <color name="black">#000000</color>
+
+    <!-- 蓝色 -->
+    <color name="blue">#0000FF</color>
+
+    <!-- 红色 -->
+    <color name="red">#FF0000</color>
+
+    <!-- 黄色 -->
+    <color name="yellow">#F0FF00</color>
+    
+    <color name="bgray">#333333</color>
+    <color name="light_gray">#e2e2e2</color>
+    <color name="gray">#A4B1BA</color>
+    <color name="cover">#F4F4F4</color>
+    <color name="bottom_bg_on">#00860A</color>
+    
+    
+</resources>

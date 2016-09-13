@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:focusable="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_title_custom_dialog"
+        android:paddingLeft="10dp" >
+
+        <TextView
+            android:id="@+id/tv_program_name"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textColor="#0182af"
+            android:textSize="20.0dip" />
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_middle_custom_dialog"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:stretchColumns="1" >
+
+        <TableRow >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:gravity="center_vertical"
+                android:text="@string/program_size"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_program_size"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:gravity="center_vertical"
+                android:text="@string/program_path"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_program_path"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:gravity="center_vertical"
+                android:text="@string/program_full_path"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_program_full_path"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:textSize="14sp" 
+                android:inputType="textMultiLine"/>
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_bottom_custom_dialog"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@null"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/delete" />
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@null"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/cancel" />
+    </LinearLayout>
+
+</LinearLayout>

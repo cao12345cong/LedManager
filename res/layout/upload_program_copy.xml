@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:clt="http://schemas.android.com/apk/res/com.clt.ledmanager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.clt.ui.TitleBarView
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        clt:left_drawble="@drawable/btn_go_back"
+        clt:right_drawble="@android:color/transparent"
+        clt:title_name="@string/upload_pic" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:stretchColumns="1" >
+
+                <TableRow >
+
+                    <TextView
+                        android:id="@+id/tv_terminate_coninfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/item_height"
+                        android:gravity="center_vertical"
+                        android:text="@string/pic_path" />
+
+                    <TextView
+                        android:id="@+id/tv_pic_path"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1.0"
+                        android:background="@color/white" />
+                </TableRow>
+
+                <TableRow >
+
+                    <TextView
+                        android:id="@+id/tv_terminate_coninfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/item_height"
+                        android:gravity="center_vertical"
+                        android:text="@string/program_name" />
+
+                    <EditText
+                        android:id="@+id/et_program_name"
+                        style="@style/port_area_edit"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/item_height"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:singleLine="true" />
+                </TableRow>
+                <!-- 两个按钮 -->
+
+                <TableRow
+                    android:id="@+id/tr_box_w_h"
+                    android:layout_marginTop="10dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/item_height"
+                        android:gravity="center_vertical"
+                        android:text="@string/size" />
+
+                    <LinearLayout >
+
+                        <EditText
+                            android:id="@+id/et_pic_width"
+                            style="@style/port_area_edit"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/item_height"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:gravity="left|center_vertical"
+                            android:hint="@string/width"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/item_height"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical"
+                            android:text="X"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/et_pic_height"
+                            style="@style/port_area_edit"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/item_height"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:gravity="left|center_vertical"
+                            android:hint="@string/height"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/item_height"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <Button
+                    android:id="@+id/btn_creat_upload"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/item_height"
+                    android:background="@drawable/btn_selector"
+                    android:text="@string/create_upload"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_14" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

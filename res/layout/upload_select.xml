@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:clt="http://schemas.android.com/apk/res/com.clt.ledmanager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.clt.ui.TitleBarView
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        clt:left_drawble="@android:color/transparent"
+        clt:right_drawble="@android:color/transparent"
+        clt:title_name="" />
+    <!-- 选择文件 -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:focusable="true"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/et_upload_select_file_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:hint="@string/please_select_file"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true" />
+
+                <Button
+                    android:id="@+id/btn_upload_select_file_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/btn_red_selector"
+                    android:text="选择文件"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_14" />
+            </LinearLayout>
+            <!-- 上传按钮 -->
+
+            <Button
+                android:id="@+id/btn_upload_1"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_search_terminal_selector"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_14" />
+
+            <!-- 选择文件 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <EditText
+                    android:id="@+id/et_upload_select_file_2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:focusableInTouchMode="true" />
+
+                <Button
+                    android:id="@+id/btn_upload_select_file_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/btn_red_selector"
+                    android:text="选择文件"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_14" />
+            </LinearLayout>
+            <!-- 上传按钮 -->
+
+            <Button
+                android:id="@+id/btn_upload_2"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_search_terminal_selector"
+                android:text="上传文件"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_14" 
+                android:visibility="gone"/>
+
+            <!-- 选择文件 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <EditText
+                    android:id="@+id/et_upload_select_file_3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:focusableInTouchMode="true" />
+
+                <Button
+                    android:id="@+id/btn_upload_select_file_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/btn_red_selector"
+                    android:text="选择文件"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_14" />
+            </LinearLayout>
+            <!-- 上传按钮 -->
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btn_upload_3"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_search_terminal_selector"
+                android:text="上传文件"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_14" />
+            <!-- 正在上传中 -->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_upload_center"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_search_terminal_selector"
+        android:text="@string/see_upload_situation"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_14" />
+
+</LinearLayout>

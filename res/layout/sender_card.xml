@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 发送卡页面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:clt="http://schemas.android.com/apk/res/com.clt.ledmanager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.clt.ui.TitleBarView
+        android:id="@+id/titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        clt:left_drawble="@android:color/transparent"
+        clt:right_drawble="@android:color/transparent"
+        clt:title_name="@string/sender_card" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1.0" >
+
+        <LinearLayout
+            android:id="@+id/ll_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
+
+                    <!-- 发送卡型号 -->
+
+                    <TextView
+                        android:id="@+id/tv_sender_typeinfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_height"
+                        android:gravity="center_vertical"
+                        android:paddingRight="10dp"
+                        android:text="@string/sender_type" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:stretchColumns="1" >
+
+                        <!-- 自动亮度调节 -->
+
+                        <TableRow
+                            android:id="@+id/tr_auto_bright_adjust"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/item_height"
+                                android:gravity="center_vertical"
+                                android:text="@string/auto_bright_adjust" />
+
+                            <com.clt.ui.CustomerSpinner
+                                android:id="@+id/spinner_auto_bright_adjust"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/item_height"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/spinner_selector"
+                                android:gravity="left|center_vertical"
+                                android:textSize="@dimen/font_14" />
+                        </TableRow>
+                        <!-- 分辨率第一列 -->
+
+                        <TableRow android:layout_marginTop="10dp" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/item_height"
+                                android:gravity="center_vertical"
+                                android:text="@string/resolution" />
+
+                            <com.clt.ui.CustomerSpinner
+                                android:id="@+id/spinner_resolution"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/item_height"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/spinner_selector"
+                                android:gravity="left|center_vertical"
+                                android:textSize="@dimen/font_14" />
+                        </TableRow>
+                        <!-- 分辨率第二列 自定义 -->
+
+                        <TableRow
+                            android:id="@+id/tr_res_custom"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/item_height"
+                                android:focusable="false"
+                                android:gravity="center_vertical" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/item_height"
+                                android:layout_marginLeft="10dp" >
+
+                                <EditText
+                                    android:id="@+id/et_resolution_width"
+                                    style="@style/port_area_edit"
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/item_height"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:singleLine="true" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/item_height"
+                                    android:gravity="center_vertical"
+                                    android:text="X"
+                                    android:textSize="12sp" />
+
+                                <EditText
+                                    android:id="@+id/et_resolution_height"
+                                    style="@style/port_area_edit"
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/item_height"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:singleLine="true" />
+                            </LinearLayout>
+                        </TableRow>
+                        <!-- 显示模式 -->
+
+                        <TableRow
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/item_height"
+                                android:gravity="center_vertical"
+                                android:text="@string/display_mode" />
+
+                            <com.clt.ui.CustomerSpinner
+                                android:id="@+id/spinner_display_mode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/item_height"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/spinner_selector"
+                                android:gravity="left|center_vertical"
+                                android:textSize="@dimen/font_14" />
+                        </TableRow>
+
+                        <!-- 逐帧隔帧 -->
+
+                        <TableRow
+                            android:id="@+id/tr_sender_output"
+                            android:layout_marginTop="10dp" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/item_height"
+                                android:gravity="center_vertical"
+                                android:text="@string/sender_output" />
+
+                            <com.clt.ui.CustomerSpinner
+                                android:id="@+id/spinner_out_put"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/item_height"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/spinner_selector"
+                                android:gravity="left|center_vertical"
+                                android:textSize="@dimen/font_14" />
+                        </TableRow>
+                        <!-- 帧率 -->
+
+                        <TableRow
+                            android:id="@+id/tr_video_source"
+                            android:layout_marginTop="10dp" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/item_height"
+                                android:gravity="center_vertical"
+                                android:text="@string/video_source" />
+
+                            <com.clt.ui.CustomerSpinner
+                                android:id="@+id/spinner_video_source"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/item_height"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/spinner_selector"
+                                android:gravity="left|center_vertical"
+                                android:textSize="@dimen/font_14" />
+                        </TableRow>
+
+                        <!-- DVI -->
+
+                        <TableRow android:layout_marginTop="10dp" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/item_height"
+                                android:gravity="center_vertical"
+                                android:text="@string/frame_rate" />
+
+                            <EditText
+                                android:id="@+id/et_dvi_frame_rate"
+                                style="@style/port_area_edit"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/item_height"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:focusable="false"
+                                android:singleLine="true" />
+                        </TableRow>
+                        <!-- DVI宽度 -->
+
+                        <TableRow android:layout_marginTop="10dp" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/item_height"
+                                android:gravity="center_vertical"
+                                android:text="@string/width" />
+
+                            <EditText
+                                android:id="@+id/et_dvi_width"
+                                style="@style/port_area_edit"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/item_height"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:focusable="false"
+                                android:singleLine="true" />
+                        </TableRow>
+                        <!-- DVI高度 -->
+
+                        <TableRow android:layout_marginTop="10dp" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/item_height"
+                                android:gravity="center_vertical"
+                                android:text="@string/height" />
+
+                            <EditText
+                                android:id="@+id/et_dvi_height"
+                                style="@style/port_area_edit"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/item_height"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:focusable="false"
+                                android:singleLine="true" />
+                        </TableRow>
+                        <!-- 实时温度 -->
+
+                        <TableRow android:layout_marginTop="10dp" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/item_height"
+                                android:gravity="center_vertical"
+                                android:text="@string/tempeture" />
+
+                            <EditText
+                                android:id="@+id/et_sender_tempeture"
+                                style="@style/port_area_edit"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/item_height"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:focusable="false"
+                                android:singleLine="true" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:orientation="vertical" >
+
+                    <Button
+                        android:id="@+id/btn_detect"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_height"
+                        android:background="@drawable/btn_red_selector"
+                        android:text="@string/detect"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/btn_resolution_set"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_height"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/btn_red_selector"
+                        android:text="@string/set"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_res_custom"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_height"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/item_height"
+                            android:gravity="center_vertical"
+                            android:text="@string/frame_rate"
+                            android:visibility="gone" />
+
+                        <com.clt.ui.CustomerSpinner
+                            android:id="@+id/spinner_res_frame_rate"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/item_height"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1.0"
+                            android:background="@drawable/spinner_selector" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 控制面积 -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/set_port_area" />
+
+            <com.clt.ui.CustomerSpinner
+                android:id="@+id/spinner_resolution"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/spinner_selector"
+                android:gravity="left|center_vertical"
+                android:textSize="@dimen/font_14"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/row_title"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/page_list_above"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/x" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/y" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/width" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/height" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/page_list_middle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/a_port" />
+
+                <EditText
+                    android:id="@+id/et_a_1"
+                    style="@style/port_area_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/et_a_2"
+                    style="@style/port_area_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/et_a_3"
+                    style="@style/port_area_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/et_a_4"
+                    style="@style/port_area_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/page_list_middle"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="@string/b_port" />
+
+                <EditText
+                    android:id="@+id/et_b_1"
+                    style="@style/port_area_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/et_b_2"
+                    style="@style/port_area_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/et_b_3"
+                    style="@style/port_area_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/et_b_4"
+                    style="@style/port_area_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/page_list_middle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/c_port" />
+
+                <EditText
+                    android:id="@+id/et_c_1"
+                    style="@style/port_area_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/et_c_2"
+                    style="@style/port_area_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/et_c_3"
+                    style="@style/port_area_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/et_c_4"
+                    style="@style/port_area_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row_d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/page_list_below"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/d_port" />
+
+                <EditText
+                    android:id="@+id/et_d_1"
+                    style="@style/port_area_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/et_d_2"
+                    style="@style/port_area_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/et_d_3"
+                    style="@style/port_area_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/et_d_4"
+                    style="@style/port_area_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_save_area"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:text="@string/send"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_14" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

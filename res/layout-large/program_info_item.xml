@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 选择终端item -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <!--  -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" 
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48dp" >
+
+                <TextView
+                    android:id="@+id/tv_program_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_program_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/program_size"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_program_createtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/program_create_time"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_program_path_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/program_path"
+                    android:textSize="12sp" 
+                    android:textColor="@color/gray"/>
+                <TextView
+                    android:id="@+id/tv_program_path"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/program_full_path"
+                    android:textSize="12sp" 
+                    android:textColor="@color/gray"/>
+            </LinearLayout>
+
+            
+        </LinearLayout>
+        
+       <!-- 图片 -->
+       <ImageView 
+           android:id="@+id/tv_program_playing"
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="10dp"
+           android:layout_width="48dp"
+           android:layout_height="match_parent"
+           android:scaleType="fitCenter"
+           android:background="@drawable/right"
+           android:visibility="gone"/>
+    </LinearLayout>
+
+</LinearLayout>

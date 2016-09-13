@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:clt="http://schemas.android.com/apk/res/com.clt.ledmanager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.clt.ui.TitleBarView
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        clt:left_drawble="@drawable/btn_go_back"
+        clt:left_text="@string/home_page"
+        clt:right_drawble="@android:color/transparent"
+        clt:title_name="@string/upload_pic" />
+
+    <ExpandableListView
+        android:id="@+id/elv_files"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:scrollbars="none" 
+        android:divider="@color/gray"
+        android:dividerHeight="0.5sp"
+        android:headerDividersEnabled="false"
+        android:footerDividersEnabled="true"
+        android:groupIndicator="@drawable/ic_expandlist_selector">
+    </ExpandableListView>
+
+</LinearLayout>

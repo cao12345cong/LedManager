@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:clt="http://schemas.android.com/apk/res/com.clt.ledmanager"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:text="@string/text_source"
+        android:textSize="14sp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1" >
+
+        <TableRow
+            android:id="@+id/tr_box_w_h"
+            android:background="@drawable/page_list_above"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/item_height"
+                android:gravity="center_vertical"
+                android:text="@string/text_source" />
+
+            <com.clt.ui.CustomerSpinner
+                android:id="@+id/spinner_text_source"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/item_height"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_selector"
+                android:gravity="left|center_vertical"
+                android:textSize="@dimen/font_14" />
+        </TableRow>
+        <!-- 来自输入 -->
+
+        <TableRow
+            android:id="@+id/tr_from_input"
+            android:background="@drawable/page_list_below"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/item_height"
+                android:gravity="center_vertical"
+                android:text="" />
+
+            <EditText
+                android:id="@+id/et_text_input"
+                style="@style/port_area_edit"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:maxLines="10"
+                android:minLines="3"
+                android:scrollbars="vertical"
+                android:singleLine="false" />
+        </TableRow>
+        <!-- 来自文件 -->
+
+        <TableRow
+            android:id="@+id/tr_from_text"
+            android:background="@drawable/page_list_below"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/item_height"
+                android:gravity="center_vertical"
+                android:text="@string/add_txt" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/item_height"
+                android:layout_weight="1" >
+
+                <EditText
+                    android:id="@+id/et_file_path"
+                    style="@style/port_area_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/item_height"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical"
+                    android:singleLine="true" />
+
+                <Button
+                    android:id="@+id/btn_select_file"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/item_height"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/btn_search_terminal_selector"
+                    android:text="@string/add"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_14" />
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:text="@string/singleline_text_properties"
+        android:textSize="14sp" 
+         android:id="@+id/tv_file_property"
+        />
+
+    <TableLayout
+        android:id="@id/tl_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        >
+
+        <!-- 炫彩 -->
+        <!--
+        <TableRow
+            android:background="@drawable/page_list_middle"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/item_height"
+                android:gravity="center_vertical"
+                android:text="炫彩" />
+
+            <CheckBox
+                android:id="@+id/cb_many_color"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/item_height"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:paddingRight="10dp"
+                android:textSize="@dimen/font_14" />
+        </TableRow>
+        -->
+        <!-- 连续左移 -->
+
+        <TableRow
+            android:layout_marginTop="10dp"
+            android:background="@drawable/page_list_above"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/item_height"
+                android:gravity="center_vertical"
+                android:text="@string/move_left" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/item_height"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1" >
+
+                <CheckBox
+                    android:id="@+id/cb_left_move"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/item_height"
+                    android:gravity="center_vertical"
+                    android:paddingRight="10dp"
+                    android:textSize="@dimen/font_14" />
+                <!-- 首尾相接 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_head_tail_conn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/item_height"
+                    android:visibility="invisible" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/item_height"
+                        android:gravity="center_vertical"
+                        android:text="@string/head_tail_conn" />
+
+                    <CheckBox
+                        android:id="@+id/cb_head_tail_conn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/item_height"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:paddingRight="10dp"
+                        android:textSize="@dimen/font_14" />
+                </LinearLayout>
+            </LinearLayout>
+        </TableRow>
+        <!-- 字体 -->
+
+        <TableRow
+            android:id="@+id/tr_box_w_h"
+            android:background="@drawable/page_list_middle"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/item_height"
+                android:gravity="center_vertical"
+                android:text="@string/font" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/item_height"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1" >
+
+                <com.clt.ui.CustomerSpinner
+                    android:id="@+id/spinner_text_font"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/item_height"
+                    android:background="@drawable/spinner_selector"
+                    android:gravity="left|center_vertical"
+                    android:textSize="@dimen/font_14" />
+
+                <com.clt.ui.CustomerSpinner
+                    android:id="@+id/spinner_font_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/item_height"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/spinner_selector"
+                    android:gravity="left|center_vertical"
+                    android:textSize="@dimen/font_14" />
+
+                <CheckBox
+                    android:id="@+id/cb_font_bold"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/font_bold_selector"
+                    android:button="@null" />
+
+                <CheckBox
+                    android:id="@+id/cb_font_italic"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/font_italic_selector"
+                    android:button="@null" />
+
+                <CheckBox
+                    android:id="@+id/cb_font_underline"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/font_underline_selector"
+                    android:button="@null" />
+            </LinearLayout>
+        </TableRow>
+        <!-- 字体颜色-->
+
+        <TableRow
+            android:id="@+id/tr_box_w_h"
+            android:background="@drawable/page_list_below"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/item_height"
+                android:gravity="center_vertical"
+                android:text="@string/text_color" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/item_height"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1" >
+
+                <com.clt.ui.CustomerSpinner
+                    android:id="@+id/spinner_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/item_height"
+                    android:background="@drawable/spinner_selector"
+                    android:gravity="left|center_vertical"
+                    android:textSize="@dimen/font_14" />
+				<TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="@dimen/item_height"
+	                android:gravity="center_vertical"
+	                android:text="@string/background_color" 
+	                android:layout_marginLeft="5dp"/>
+                <com.clt.ui.CustomerSpinner
+                    android:id="@+id/spinner_back_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/item_height"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/spinner_selector"
+                    android:gravity="left|center_vertical"
+                    android:textSize="@dimen/font_14" 
+                    />
+
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

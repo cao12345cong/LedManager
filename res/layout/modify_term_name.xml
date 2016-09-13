@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@null"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_title_custom_dialog"
+        android:paddingLeft="10dp" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/modify_term_name"
+            android:textColor="#0182af"
+            android:textSize="20.0dip" />
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_middle_custom_dialog"
+        android:gravity="center_vertical"
+        android:minHeight="150dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:stretchColumns="1" >
+
+        <TableRow >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/currnet_term_name" />
+
+            <TextView
+                android:id="@+id/tv_term_name"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/new_term_name" />
+
+            <EditText
+                android:id="@+id/et_entry_name"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical"
+                android:textSize="14sp" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_bottom_custom_dialog"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@null"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/submit" />
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@null"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/cancel" />
+    </LinearLayout>
+
+</LinearLayout>

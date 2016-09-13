@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 发送卡网口输出面积设置 -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <com.clt.ui.CustomerSpinner
+            android:id="@+id/spinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/spinner_selector"
+            android:focusableInTouchMode="true"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/l_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 发送卡型号信息 -->
+
+            <TextView
+                android:id="@+id/tv_sender_typeinfo"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+            <com.clt.ui.CustomerSpinner
+                android:id="@+id/spinner_resolution"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/spinner_selector" />
+
+            <!--
+                 <Spinner
+                android:id="@+id/spinner_resolution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            -->
+            <!-- 四个网口信息 -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/set_port_area"
+                android:textSize="@dimen/font_16" />
+
+            <LinearLayout
+                android:id="@+id/l_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/l_3"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/row_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/page_list_above"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/x" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/y" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/width" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/height" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/row_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/page_list_middle"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/a_port" />
+
+                    <EditText
+                        android:id="@+id/et_a_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:singleLine="true" >
+                    </EditText>
+
+                    <EditText
+                        android:id="@+id/et_a_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:singleLine="true" />
+
+                    <EditText
+                        android:id="@+id/et_a_3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:singleLine="true" />
+
+                    <EditText
+                        android:id="@+id/et_a_4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/row_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/page_list_middle"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/b_port" />
+
+                    <EditText
+                        android:id="@+id/et_b_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:singleLine="true" />
+
+                    <EditText
+                        android:id="@+id/et_b_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:singleLine="true" />
+
+                    <EditText
+                        android:id="@+id/et_b_3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:singleLine="true" />
+
+                    <EditText
+                        android:id="@+id/et_b_4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/row_c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/page_list_middle"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/c_port" />
+
+                    <EditText
+                        android:id="@+id/et_c_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:singleLine="true" />
+
+                    <EditText
+                        android:id="@+id/et_c_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:singleLine="true" />
+
+                    <EditText
+                        android:id="@+id/et_c_3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:singleLine="true" />
+
+                    <EditText
+                        android:id="@+id/et_c_4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/row_d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/page_list_below"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/d_port" />
+
+                    <EditText
+                        android:id="@+id/et_d_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:singleLine="true" />
+
+                    <EditText
+                        android:id="@+id/et_d_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:singleLine="true" />
+
+                    <EditText
+                        android:id="@+id/et_d_3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:singleLine="true" />
+
+                    <EditText
+                        android:id="@+id/et_d_4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_save_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_search_terminal_selector"
+                    android:gravity="center"
+                    android:text="@string/send"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_14" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_see_more"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:text="高级"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 分辨率 -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center_vertical"
+            android:text="@string/sender_resolution"
+            android:textSize="@dimen/font_16" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/page_input_box"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp" >
+
+            <LinearLayout
+                android:id="@+id/ll_sender_resolution"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="@string/resolution" />
+
+                <com.clt.ui.CustomerSpinner
+                    android:id="@+id/spinner_sender_resolution"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/spinner_selector" />
+
+                <!--
+                     <Spinner
+                    android:id="@+id/spinner_sender_resolution"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1.0"
+                    android:entries="@array/sender_resolution" />                -->
+
+                <Button
+                    android:id="@+id/btn_set_sender_resolution"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/btn_search_terminal_selector"
+                    android:text="@string/set"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_sender_resolution_custom"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="@string/resolution" />
+
+                <EditText
+                    android:id="@+id/et_edid_width"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="*" />
+
+                <EditText
+                    android:id="@+id/et_edid_height"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="@string/frame_rate" />
+
+                <com.clt.ui.CustomerSpinner
+                    android:id="@+id/spinner_frame_rate"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/spinner_selector" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 4.测试模式 -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:text="@string/test_mode" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/page_input_box"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/test_mode_type" />
+
+            <com.clt.ui.CustomerSpinner
+                android:id="@+id/spinner_test_mode_type"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/spinner_selector" />
+
+            <Button
+                android:id="@+id/btn_test_mode_type"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/btn_search_terminal_selector"
+                android:text="@string/set"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_14" />
+            <!--
+                 <Spinner
+                android:id="@+id/spinner_test_mode_type"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1.0"
+                android:entries="@array/test_mode"
+                android:focusableInTouchMode="true" />            -->
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_detect_sender"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_search_terminal_selector"
+            android:gravity="center"
+            android:text="@string/detect_sender"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_14"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</ScrollView>

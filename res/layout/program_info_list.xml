@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:clt="http://schemas.android.com/apk/res/com.clt.ledmanager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/lv_programs_info"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:footerDividersEnabled="true"
+        android:scrollbars="vertical" />
+
+    <TextView
+        android:id="@+id/tv_program_count"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="#eeeeee"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true" />
+    <!--
+         <TextView
+        android:id="@+id/tv_no_program"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="@string/no_program"
+        android:visibility="gone" />
+    -->
+
+</LinearLayout>

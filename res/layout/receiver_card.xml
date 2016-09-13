@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 接收卡页面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:clt="http://schemas.android.com/apk/res/com.clt.ledmanager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.clt.ui.TitleBarView
+        android:id="@+id/titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        clt:left_drawble="@android:color/transparent"
+        clt:right_drawble="@android:color/transparent"
+        clt:title_name="@string/receiver_card" />
+    <!-- 箱体参数 -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:stretchColumns="1" >
+
+                <TableRow >
+
+                    <TextView
+                        android:id="@+id/tv_terminate_coninfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/item_height"
+                        android:gravity="center_vertical"
+                        android:text="@string/box_parameter" />
+
+                    <com.clt.ui.CustomerSpinner
+                        android:id="@+id/spinner_box_param"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/item_height"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1.0"
+                        android:gravity="left|center_vertical"
+                        android:textSize="@dimen/font_14"
+                        android:background="@drawable/spinner_selector" />
+                </TableRow>
+                <!-- 两个按钮 -->
+
+                <TableRow
+                    android:id="@+id/tr_box_w_h"
+                    android:layout_marginTop="10dp"
+                     >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/item_height"
+                        android:gravity="center_vertical"
+                        android:text="@string/box_w_h" />
+
+                    <LinearLayout >
+
+                        <EditText
+                            android:id="@+id/et_box_width"
+                            style="@style/port_area_edit"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/item_height"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:gravity="left|center_vertical"
+                            android:hint="@string/box_width_tiny"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/item_height"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical"
+                            android:text="X"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/et_box_height"
+                            style="@style/port_area_edit"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/item_height"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:gravity="left|center_vertical"
+                            android:hint="@string/box_height_tiny"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/item_height"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <Button
+                    android:id="@+id/btn_send"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/item_height"
+                    android:background="@drawable/btn_search_terminal_selector"
+                    android:text="@string/send"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_14" />
+
+                <Button
+                    android:id="@+id/btn_solid"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/item_height"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/btn_search_terminal_selector"
+                    android:text="@string/save_to_rcv"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_14" />
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:stretchColumns="1,3" >
+
+                <TableRow >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_height"
+                        android:gravity="center_vertical"
+                        android:text="@string/refresh" />
+
+                    <TextView
+                        android:id="@+id/tv_refresh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_height"
+                        android:gravity="center_vertical"
+                        android:text="@string/refresh_rate" />
+
+                    <TextView
+                        android:id="@+id/tv_refresh_rate"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical" />
+                </TableRow>
+
+                <TableRow >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_height"
+                        android:gravity="center_vertical"
+                        android:text="@string/gray_level" />
+
+                    <TextView
+                        android:id="@+id/tv_gray_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_height"
+                        android:gravity="center_vertical"
+                        android:text="@string/gray_mode" />
+
+                    <TextView
+                        android:id="@+id/tv_gray_mode"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical" />
+                </TableRow>
+
+                <TableRow >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_height"
+                        android:gravity="center_vertical"
+                        android:text="@string/frequency" />
+
+                    <TextView
+                        android:id="@+id/tv_frequency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_height"
+                        android:gravity="center_vertical"
+                        android:text="@string/blanking_value" />
+
+                    <TextView
+                        android:id="@+id/tv_blanking_value"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical" />
+                </TableRow>
+
+                <TableRow >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_height"
+                        android:gravity="center_vertical"
+                        android:text="@string/gamma_value" />
+
+                    <TextView
+                        android:id="@+id/tv_gamma_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_height"
+                        android:gravity="center_vertical"
+                        android:text="@string/bri_level" />
+
+                    <TextView
+                        android:id="@+id/tv_bri_level"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical" />
+                </TableRow>
+
+                <TableRow >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_height"
+                        android:gravity="center_vertical"
+                        android:text="@string/bright_percent" />
+
+                    <TextView
+                        android:id="@+id/tv_bright_percent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_height"
+                        android:gravity="center_vertical"
+                        android:text="@string/lease_oe" />
+
+                    <TextView
+                        android:id="@+id/tv_lease_oe"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

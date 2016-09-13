@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- tabHost -->
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <RadioGroup
+            android:id="@+id/rg_bottom_menu"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:checkedButton="@+id/rb_index"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@id/rb_index"
+                style="@style/tab_rdo_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/bottom_radio_selector"
+                android:text="@string/home_page" />
+
+            <RadioButton
+                android:id="@+id/rb_sender_card"
+                style="@style/tab_rdo_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/bottom_radio_selector"
+                android:text="@string/sender_card" />
+
+            <RadioButton
+                android:id="@+id/rb_receiver_card"
+                style="@style/tab_rdo_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/bottom_radio_selector"
+                android:text="@string/receiver_card" />
+
+            <RadioButton
+                android:id="@+id/rb_connect_relation"
+                style="@style/tab_rdo_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/bottom_radio_selector"
+                android:text="@string/connect_relation" />
+        </RadioGroup>
+    </LinearLayout>
+
+</TabHost>

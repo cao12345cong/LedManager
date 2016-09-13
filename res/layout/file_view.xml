@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:clt="http://schemas.android.com/apk/res/com.clt.ledmanager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.clt.ui.TitleBarView
+        android:id="@+id/titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        clt:left_drawble="@drawable/btn_go_back"
+        clt:left_text="@string/back"
+        clt:right_drawble="@android:color/transparent"
+        clt:title_name="@string/select_upload_program" />
+
+    <LinearLayout
+        android:id="@+id/ll_go_back_step"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:background="@drawable/btn_dir_goback_selector"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/tv_go_back_step"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/item_height"
+            android:layout_weight="1.0"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/item_height"
+            android:gravity="center_vertical"
+            android:text="@string/parent_directory"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#cccccc" />
+
+    <ListView
+        android:id="@+id/fileView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true" >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/ll_submit"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="@drawable/btn_dir_goback_selector"
+        >
+
+        <TextView
+            android:id="@+id/tv_has_selected"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/item_height"
+            android:layout_weight="1.0"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:textSize="14sp" 
+            />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_selector"
+            android:gravity="center"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_14" />
+    </LinearLayout>
+
+</LinearLayout>

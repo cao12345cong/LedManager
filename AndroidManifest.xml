@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.clt.ledmanager"
+    android:versionCode="101"
+    android:versionName="0.2.5" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.android.email.permission.ACCESS_PROVIDER" />
+    <uses-permission android:name="com.android.email.permission.READ_ATTACHMENT" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:allowBackup="true"
+        android:allowClearUserData="false"
+        android:configChanges="locale"
+        android:debuggable="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="LedManager"
+        android:name="com.clt.activity.Application"
+        android:process="com.clt"
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+
+        <!-- TabHost -->
+        <activity
+            android:configChanges="locale"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:name="com.clt.activity.MyTabActivity"
+            android:screenOrientation="portrait" >
+             <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 首页 -->
+        <activity
+            android:configChanges="locale"
+            android:label="@string/app_name"
+            android:launchMode="standard"
+            android:name="com.clt.activity.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 选择上传节目页面 -->
+        <activity
+            android:configChanges="locale"
+            android:name="com.clt.activity.FilesViewActivity"
+            android:screenOrientation="portrait" />
+        <!-- 选择终端页 -->
+        <activity
+            android:configChanges="locale"
+            android:name="com.clt.activity.LedSelectActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 发送卡页 -->
+        <activity
+            android:configChanges="locale"
+            android:name="com.clt.activity.SenderCardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 接收卡页 -->
+        <activity
+            android:configChanges="locale"
+            android:name="com.clt.activity.ReceiverCardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 连接关系 -->
+        <activity
+            android:configChanges="locale"
+            android:name="com.clt.activity.ConnectRelationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 上传图片 -->
+        <activity
+            android:configChanges="locale"
+            android:name="com.clt.activity.UploadProgramAcitvity2"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+           
+        </activity>
+        <activity
+            android:configChanges="locale"
+            android:name="com.clt.activity.UploadProgramAcitvity3"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+           
+        </activity>
+        <!-- 信息 -->
+        <activity
+            android:configChanges="locale"
+            android:name="com.clt.activity.InfoTabActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <!-- 节目信息 -->
+        <activity
+            android:configChanges="locale"
+            android:name="com.clt.activity.ProgramInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 其他信息 -->
+        <activity
+            android:configChanges="locale"
+            android:name="com.clt.activity.InfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:configChanges="locale"
+            android:name="com.clt.activity.ScreenShotActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <service android:name="com.clt.service.NetService" />
+        <service android:name="com.clt.service.UploadFileService" />
+        <service android:name="com.clt.service.ReceiveService" />
+    </application>
+
+</manifest>

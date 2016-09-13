@@ -1,0 +1,395 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:tools="http://schemas.android.com/tools"
+    xmlns:clt="http://schemas.android.com/apk/res/com.clt.ledmanager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.clt.ui.TitleBarView
+        android:id="@+id/titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        clt:left_drawble="@android:color/transparent"
+        clt:right_drawble="@drawable/btn_info"
+        clt:title_name="@string/home_page"
+       	clt:right_text="@string/info"/>
+    <!-- 服务端信息 -->
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1.0" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:orientation="vertical" >
+
+                <!-- 服务端名称 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_height"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_terminate_coninfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/not_connect" />
+
+                    <TextView
+                        android:id="@+id/tv_terminate_conntime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <!--  -->
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10px"
+                    android:stretchColumns="1" >
+
+                    <!-- 亮度 -->
+
+                    <TableRow >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/item_height"
+                            android:gravity="center_vertical" >
+
+                            <TextView
+                                android:id="@+id/tvBrightHint"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/item_height"
+                                android:ellipsize="marquee"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:gravity="center_vertical|left"
+                                android:maxWidth="60dp"
+                                android:singleLine="true"
+                                android:text="@string/bright" />
+
+                            <TextView
+                                android:id="@+id/tvBrightValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/item_height"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:text="100%" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/item_height"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical" >
+
+                            <SeekBar
+                                android:id="@+id/sbBright"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp" />
+                        </LinearLayout>
+                    </TableRow>
+                    <!-- 色温 -->
+
+                    <TableRow >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/item_height"
+                            android:gravity="center_vertical" >
+
+                            <TextView
+                                android:id="@+id/tvColorTempHint"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:ellipsize="marquee"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:gravity="center_vertical|left"
+                                android:maxWidth="60dp"
+                                android:singleLine="true"
+                                android:text="@string/color_temp" />
+
+                            <TextView
+                                android:id="@+id/tvColorTempValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:text="6500K" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/item_height"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical" >
+
+                            <SeekBar
+                                android:id="@+id/sbColorTempHint"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp" />
+                        </LinearLayout>
+                    </TableRow>
+                    <!-- 测试模式 -->
+
+                    <TableRow
+                        android:id="@+id/tr_test_mode"
+                        android:layout_marginTop="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/item_height"
+                            android:gravity="center_vertical"
+                            android:text="@string/test_mode" />
+
+                        <com.clt.ui.CustomerSpinner
+                            android:id="@+id/spinner_test_mode_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/item_height"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/spinner_selector"
+                            android:gravity="left|center_vertical"
+                            android:textSize="@dimen/font_14" />
+                    </TableRow>
+                    <!-- 自动亮度调节 -->
+
+                    <TableRow
+                        android:id="@+id/tr_auto_bright_adjust"
+                        android:layout_marginTop="10dp" 
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/item_height"
+                            android:gravity="center_vertical"
+                            android:text="@string/auto_bright_adjust" />
+
+                        <com.clt.ui.CustomerSpinner
+                            android:id="@+id/spinner_auto_bright_adjust"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/item_height"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/spinner_selector"
+                            android:gravity="left|center_vertical"
+                            android:textSize="@dimen/font_14" />
+                    </TableRow>
+                    <!-- 开关屏 -->
+
+                    <TableRow android:layout_marginTop="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/item_height"
+                            android:gravity="center_vertical|left"
+                            android:text="@string/switch_screen" />
+
+                        <com.clt.ui.CustomerSpinner
+                            android:id="@+id/spinner_on_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/item_height"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/spinner_selector"
+                            android:gravity="left|center_vertical"
+                            android:textSize="@dimen/font_14" />
+                    </TableRow>
+
+                    <!-- 节目管理 -->
+
+                    <TableRow
+                        android:id="@+id/tr_manager_program"
+                        android:layout_marginTop="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/item_height"
+                            android:gravity="center_vertical|left"
+                            android:text="@string/program_manager" />
+
+                        <com.clt.ui.CustomerSpinner
+                            android:id="@+id/spinner_program_manager"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/item_height"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/spinner_selector"
+                            android:gravity="left|center_vertical"
+                            android:textSize="@dimen/font_14" />
+                    </TableRow>
+                    <!-- 节目上传 -->
+
+                    <TableRow
+                        android:id="@+id/tr_upload_program"
+                        android:layout_marginTop="10dp" 
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/item_height"
+                            android:gravity="center_vertical"
+                            android:text="@string/upload_program"
+                            android:visibility="invisible" />
+						<LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1.0"
+                            android:layout_height="@dimen/item_height"
+                            android:gravity="center_vertical" >
+
+                            <ProgressBar
+                                android:id="@+id/pb_upload_progress"
+                                style="@android:style/Widget.ProgressBar.Horizontal"
+                                android:layout_width="0dp"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1.0"
+                                android:max="100"
+                                android:progressDrawable="@drawable/pb_sdcard_percent" />
+
+                            <TextView
+                                android:id="@+id/tv_upload_progress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/item_height"
+                                android:gravity="center_vertical"
+                                android:singleLine="true"
+                                android:layout_marginLeft="10dp"/>
+                        </LinearLayout>
+                    </TableRow>
+                    <!-- 语言切换 -->
+
+                    <TableRow android:layout_marginTop="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/item_height"
+                            android:gravity="center_vertical"
+                            android:text="@string/change_language" />
+
+                        <com.clt.ui.CustomerSpinner
+                            android:id="@+id/spinner_change_language"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/item_height"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/spinner_selector"
+                            android:gravity="left|center_vertical"
+                            android:textSize="@dimen/font_14" />
+                    </TableRow>
+                </TableLayout>
+
+                <!-- 右边按钮 -->
+
+            </LinearLayout>
+            <!-- 按钮组 -->
+
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- 查找服务端按钮 -->
+
+                <Button
+                    android:id="@+id/btnSearch"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_height"
+                    android:background="@drawable/btn_search_terminal_selector"
+                    android:text="@string/search"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_14" />
+                <!-- 保存亮度色温按钮 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="96dp" >
+
+                    <Button
+                        android:id="@+id/btn_save_bright_colortemp"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/btn_search_terminal_selector"
+                        android:text="@string/save"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_14" />
+                </LinearLayout>
+                <!-- 空按钮 -->
+
+                <Button
+                    android:id="@+id/btn_emp_tesmode"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_height"
+                    android:layout_marginTop="10dp"
+                    android:visibility="invisible" />
+                <!-- 空按钮 -->
+
+               
+
+                <Button
+                    android:id="@+id/btn_screen_shot"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_height"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_search_terminal_selector"
+                    android:text="@string/screenshots"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_14" 
+                    />
+                <!-- 上传节目按钮 -->
+
+                <Button
+                    android:id="@+id/btn_upload_program"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_height"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_search_terminal_selector"
+                    android:text="@string/upload_program"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_height"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true" />
+
+                <Button
+                    android:id="@+id/btn_control_upload"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_height"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_search_terminal_selector"
+                    android:text="@string/start_upload"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_14"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

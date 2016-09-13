@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 服务端选择界面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:orientation="horizontal"
+    >
+
+    <TextView
+        android:id="@+id/tv_receiver_port"
+        android:layout_width="0dp"
+       android:layout_height="35dp"
+        android:layout_weight="1.0"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/tv_receiver_startx"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_weight="1.0"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/tv_receiver_starty"
+        android:layout_width="0dp"
+       android:layout_height="35dp"
+        android:layout_weight="1.0"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/tv_receiver_width"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_weight="1.0"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/tv_receiver_height"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_weight="1.0"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center"
+        android:text="0" />
+
+</LinearLayout>

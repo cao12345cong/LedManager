@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:clt="http://schemas.android.com/apk/res/com.clt.ledmanager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/titlebar" >
+
+
+            <!-- 标题 -->
+
+            <LinearLayout
+                android:id="@+id/ll_titlebar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_titlebar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="@string/video_play_control" />
+
+            </LinearLayout>
+
+            <!-- 右按钮 -->
+
+            <Button
+                android:id="@+id/btn_update_programs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10dp"
+                android:text="@string/update"
+                android:drawableLeft="@drawable/ic_update"
+                android:background="@drawable/btn_red_selector"
+                android:textColor="@color/white"
+                android:layout_marginRight="10dp" />
+        </RelativeLayout>
+
+   <!--  <RadioGroup
+        android:id="@+id/rbGroupProgram"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:contentDescription="性别"
+        android:visibility="gone" >
+
+        <RadioButton
+            android:id="@+id/rbProgram0"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="第一套节目" />
+
+        <RadioButton
+            android:id="@+id/rbProgram1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="第二套节目" />
+
+        <RadioButton
+            android:id="@+id/rbProgram2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="第三套节目" />
+    </RadioGroup> -->
+
+    <ListView
+        android:id="@+id/lv_play_program"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:footerDividersEnabled="true"
+        />
+
+
+    <com.clt.ui.BottomMenuView
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:visibility="gone" >
+    </com.clt.ui.BottomMenuView>
+
+</LinearLayout>

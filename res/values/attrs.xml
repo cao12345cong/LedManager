@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 标题栏自定义属性 -->
+    <declare-styleable name="TitleBarView">
+        <!-- 左右图标的资源id -->
+		<attr name="left_drawble" format ="reference" />
+		<attr name="left_text" format ="string" />
+		<attr name="right_drawble" format ="reference"/>
+		<attr name="right_text" format ="string"/>
+		<!-- 标题名 -->
+		<attr name="title_name" format ="string"/>
+	</declare-styleable>
+</resources>

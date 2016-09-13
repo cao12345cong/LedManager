@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:clt="http://schemas.android.com/apk/res/com.clt.ledmanager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1.0"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:stretchColumns="1" >
+
+                <!-- 节目类型 -->
+
+                <TableRow android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/item_height"
+                        android:gravity="center_vertical"
+                        android:text="@string/program_type" />
+
+                    <com.clt.ui.CustomerSpinner
+                        android:id="@+id/spinner_program_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/item_height"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/spinner_selector"
+                        android:gravity="left|center_vertical"
+                        android:textSize="@dimen/font_14" />
+                </TableRow>
+
+                <!-- 节目名 -->
+
+                <TableRow android:layout_marginTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/tv_terminate_coninfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/item_height"
+                        android:gravity="center_vertical"
+                        android:text="@string/program_name" />
+
+                    <EditText
+                        android:id="@+id/et_program_name"
+                        style="@style/port_area_edit"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/item_height"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center_vertical"
+                        android:singleLine="true" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:text="@string/window_properties"
+                android:textSize="14sp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1" >
+
+                <!-- 坐标 -->
+
+                <TableRow
+                    android:id="@+id/tr_box_w_h"
+                    android:layout_height="58dp"
+                    android:background="@drawable/page_list_above"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/item_height"
+                        android:gravity="center_vertical"
+                        android:text="@string/startX" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/item_height"
+                        android:layout_marginRight="10dp"
+                        android:paddingRight="10dp" >
+
+                        <EditText
+                            android:id="@+id/et_start_x"
+                            style="@style/port_area_edit"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/item_height"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:gravity="left|center_vertical"
+                            android:hint="X"
+                            android:inputType="number"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="@dimen/item_height"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/startY"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/et_start_y"
+                            style="@style/port_area_edit"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/item_height"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:gravity="left|center_vertical"
+                            android:hint="Y"
+                            android:inputType="number"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                </TableRow>
+
+                <!-- 宽高 -->
+
+                <TableRow
+                    android:id="@+id/tr_box_w_h"
+                    android:layout_height="58dp"
+                    android:background="@drawable/page_list_below"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/item_height"
+                        android:gravity="center_vertical"
+                        android:text="@string/width" />
+
+                    <LinearLayout
+                        android:layout_marginRight="10dp"
+                        android:paddingRight="10dp" >
+
+                        <EditText
+                            android:id="@+id/et_program_width"
+                            style="@style/port_area_edit"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/item_height"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:gravity="left|center_vertical"
+                            android:hint="@string/width"
+                            android:inputType="number"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="@dimen/item_height"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/height"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/et_program_height"
+                            style="@style/port_area_edit"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/item_height"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:gravity="left|center_vertical"
+                            android:hint="@string/height"
+                            android:inputType="number"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                </TableRow>
+                <!-- 选择文件 -->
+
+            </TableLayout>
+            <!-- include -->
+
+            <LinearLayout
+                android:id="@+id/ll_include"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+            </LinearLayout>
+
+            <!-- 选择文件 -->
+
+            <Button
+                android:id="@+id/btn_select_file"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/btn_search_terminal_selector"
+                android:text="@string/add_file"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_14" />
+
+            
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,398 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:clt="http://schemas.android.com/apk/res/com.clt.ledmanager"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.clt.ui.TitleBarView
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        clt:left_drawble="@android:color/transparent"
+        clt:right_drawble="@android:color/transparent"
+        clt:title_name="" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:id="@+id/scrollview" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="58dp"
+                    android:background="@drawable/page_input_box"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" 
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1.0"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/send_cards" />
+
+                        <Button
+                            android:id="@+id/btn_recever_num_add"
+                            android:layout_width="36dp"
+                            android:layout_height="match_parent"
+                            android:text="+" />
+
+                        <Button
+                            android:id="@+id/btn_recever_num_minus"
+                            android:layout_width="36dp"
+                            android:layout_height="match_parent"
+                            android:text="-" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1.0"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/ports" />
+
+                        <Button
+                            android:id="@+id/btn_port_num_add"
+                            android:layout_width="36dp"
+                            android:layout_height="match_parent"
+                            android:text="+" />
+
+                        <Button
+                            android:id="@+id/btn_port_num_minus"
+                            android:layout_width="36dp"
+                            android:layout_height="match_parent"
+                            android:text="-" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 选择发送卡 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/page_list_above"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" 
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/send_card" />
+
+                    <com.clt.ui.CustomerSpinner
+                        android:id="@+id/spinner_receiver_port"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/spinner_selector" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.0"
+                android:orientation="vertical" >
+
+                <!-- 发送卡信息 -->
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/page_list_middle"
+                    android:stretchColumns="0,1,2,3,4,5" 
+                    android:visibility="gone">
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical"
+                            android:text="" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="35dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/x" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="35dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/y" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="35dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/width" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="35dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/height" />
+                    </TableRow>
+
+                    <TableRow android:visibility="gone" >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="35dp"
+                            android:gravity="center_vertical"
+                            android:text="1" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="35dp"
+                            android:gravity="center_vertical"
+                            android:text="A" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="35dp"
+                            android:gravity="center_vertical"
+                            android:text="0" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="35dp"
+                            android:gravity="center_vertical"
+                            android:text="0" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="35dp"
+                            android:gravity="center_vertical"
+                            android:text="64" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="35dp"
+                            android:gravity="center_vertical"
+                            android:text="64" />
+                    </TableRow>
+                </TableLayout>
+
+                <ListView
+                    android:id="@+id/lv_receiver_ports"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:footerDividersEnabled="true"
+                    android:visibility="gone" />
+                <!-- 接收卡数量 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="58dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/page_input_box"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp"
+                            android:gravity="center_vertical"
+                            android:text="行数" />
+
+                        <com.clt.ui.ReceiverAddMinusView
+                            android:id="@+id/ramv_row"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp" >
+                        </com.clt.ui.ReceiverAddMinusView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp"
+                            android:gravity="center_vertical"
+                            android:text="列数" />
+
+                        <com.clt.ui.ReceiverAddMinusView
+                            android:id="@+id/ramv_column"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp" >
+                        </com.clt.ui.ReceiverAddMinusView>
+                    </LinearLayout>
+                </LinearLayout>
+                <!--  -->
+
+                <com.clt.ui.ReceiverShowView
+                    android:id="@+id/rsv_show"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:minHeight="300dp" >
+                </com.clt.ui.ReceiverShowView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <!-- 8种模式 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="68dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/page_list_above"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/btn_mode_1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/btn_search_terminal_selector"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bg_receiver_mode1" />
+
+        <ImageView
+            android:id="@+id/btn_mode_2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_search_terminal_selector"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bg_receiver_mode2" />
+
+        <ImageView
+            android:id="@+id/btn_mode_3"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_search_terminal_selector"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bg_receiver_mode3" />
+
+        <ImageView
+            android:id="@+id/btn_mode_4"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_search_terminal_selector"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bg_receiver_mode4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="68dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/page_list_below"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/btn_mode_5"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/btn_search_terminal_selector"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bg_receiver_mode5" />
+
+        <ImageView
+            android:id="@+id/btn_mode_6"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_search_terminal_selector"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bg_receiver_mode6" />
+
+        <ImageView
+            android:id="@+id/btn_mode_7"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_search_terminal_selector"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bg_receiver_mode7" />
+
+        <ImageView
+            android:id="@+id/btn_mode_8"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_search_terminal_selector"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bg_receiver_mode8" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_save_receiver_setting"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_red_selector"
+        android:gravity="center"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_14" />
+
+    <com.clt.ui.BottomMenuView
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+		android:visibility="gone">
+    </com.clt.ui.BottomMenuView>
+
+</LinearLayout>

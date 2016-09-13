@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 产品术语 listView点击 变色 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:drawable="@color/white"/>
+    <item android:drawable="@color/cover"/>
+    
+</selector>
